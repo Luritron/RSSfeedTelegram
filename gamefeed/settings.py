@@ -38,9 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rssfeed',
-    'django_extensions',  # Optional: for development tools
-    'rest_framework',     # Optional: for API support
-    'django_filters',     # Optional: for filtering in APIs
 ]
 
 MIDDLEWARE = [
@@ -78,8 +75,12 @@ WSGI_APPLICATION = 'gamefeed.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'gamefeed_db',
+        'USER': 'gamefeed_user',
+        'PASSWORD': '!iart1235i!',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
